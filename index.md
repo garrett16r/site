@@ -1,5 +1,5 @@
 # garrett16r.github.io
-![Personal Website Banner](pfp.png)
+![Profile Picture](assets/pfp.png)
 ## About
 
 Here you'll find information about my projects, interests, and more.
