@@ -7,9 +7,9 @@ https://www.vulnhub.com/entry/mr-robot-1,151/
 1. /robots/key-1-of-3.txt: 073403c8a58a1f80d943455fb30724b9
 2. /home/robot/key-2-of-3.txt: 822c73956184f694993bede3eb39f959
 3. /root/key-3-of-3.txt: 04787ddef27c3dee1ee161b21670b4e4
+
 # **Flag 1**
 ## nmap
-- Nmap
 - ran `nmap -sS --script vuln 10.10.1.102` to check for open ports and vulns
 	- Found port 22 closed, 80 and 443 open
 	- vuln script enumerated hidden dirs, led me to `/robots/`
