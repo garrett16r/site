@@ -1,1 +1,1 @@
-# syn.github.io
+# garrett16r.github.io
