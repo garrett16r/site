@@ -13,7 +13,6 @@ Expose VM: 10.10.209.238
 
 # **Recon**
 ## nmap 
-- Nmap
 - Ran `nmap -sT -p- 10.10.209.238` to check open ports
 	- -p- checks all ports (1-65535)
 - Found ports 21, 22, 53, 1337, and 1883 open
