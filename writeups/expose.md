@@ -1,6 +1,7 @@
 # Info
 **Completed 02/04/2024** 
-[https://tryhackme.com/room/expose](https://tryhackme.com/room/expose)
+
+https://tryhackme.com/room/expose
 
 **Devices:** 
 My Kali VM: 10.6.23.137 
@@ -12,7 +13,7 @@ Expose VM: 10.10.209.238
 
 # **Recon**
 ## nmap 
-- [[Nmap]]
+- Nmap
 - Ran `nmap -sT -p- 10.10.209.238` to check open ports
 	- -p- checks all ports (1-65535)
 - Found ports 21, 22, 53, 1337, and 1883 open
@@ -42,10 +43,10 @@ Expose VM: 10.10.209.238
 - We can now go to `/upload-cv00101011/index.php` and provide the password of `zeamkish`
 ## PHP Reverse Shell
 ### Uploading the reverse shell
-- There is a file upload prompt, and checking the page source reveals that only .png and .jpg files are accepted. We want a [[PHP Reverse Shell]], so it's time to experiment
+- There is a file upload prompt, and checking the page source reveals that only .png and .jpg files are accepted. We want a PHP Reverse Shell, so it's time to experiment
 - Uploading a normal .png file leads to a page telling us to check the page source for the location that it was uploaded to, which is provided as `/upload_thm_1001`
 - Navigating to `/upload-cv00101011/upload_thm_1001` reveals a file tree including the uploaded image, which we can view
-- Next, I made a copy of `/usr/share/webshells/php/php_reverse_shell.php` ([[PHP Reverse Shell]]) in my CTF directory, and renamed it to `shell.phpD.png`
+- Next, I made a copy of `/usr/share/webshells/php/php_reverse_shell.php` (PHP Reverse Shell) in my CTF directory, and renamed it to `shell.phpD.png`
 	- I set the target IP to my own and the port to 53 since it is unlikely to be blocked by outbound firewalls
 	- I chose the file for upload, set Burp Suite proxy to intercept, and clicked the upload button
 	- With the request in Burp Suite, I replaced the 'D' in the file name with a null byte (hex 00, ignoring the .png afterwards), and forwarded the request along

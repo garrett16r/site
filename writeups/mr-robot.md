@@ -1,5 +1,6 @@
 # **Info**
 **Completed 01/22/2023**
+
 https://www.vulnhub.com/entry/mr-robot-1,151/
 
 **Flags:**
@@ -8,7 +9,7 @@ https://www.vulnhub.com/entry/mr-robot-1,151/
 3. /root/key-3-of-3.txt: 04787ddef27c3dee1ee161b21670b4e4
 # **Flag 1**
 ## nmap
-- [[Nmap]]
+- Nmap
 - ran `nmap -sS --script vuln 10.10.1.102` to check for open ports and vulns
 	- Found port 22 closed, 80 and 443 open
 	- vuln script enumerated hidden dirs, led me to `/robots/`
@@ -30,11 +31,11 @@ https://www.vulnhub.com/entry/mr-robot-1,151/
 ### Password
 - wpscan could be used to search for the password using the same wordlist (filtered.txt)
 	- Ran `wpscan -url http://10.10.1.102/wp-login.php -U elliot -P filtered.txt` which returned the password of `ER28-0652`
-## [[PHP Reverse Shell]]
+## PHP Reverse Shell
 ### Editing a PHP page
 - Looked around the admin panel, found Editor page under Appearance
 	- First page that could be edited was the 404 page, which runs a php script
-	- used `locate php-re` to find a [[PHP Reverse Shell]] on the Kali install
+	- used `locate php-re` to find a PHP Reverse Shell on the Kali install
 	- edited IP value in the template to my own, set port to 443
 	- copied the entire script into the 404 page editor and saved
 ### Using the reverse shell
@@ -64,7 +65,7 @@ https://www.vulnhub.com/entry/mr-robot-1,151/
 - Learned about using the vuln script with nmap for some hidden directory enumeration
 - Learned a way of bruteforcing usernames on HTTP POST forms with hydra
 - Learned how to bruteforce passwords on wordpress pages using wpscan
-- Learned how to inject a [[PHP Reverse Shell]] anywhere that php runs and the code can be edited at an admin level
+- Learned how to inject a PHP Reverse Shell anywhere that php runs and the code can be edited at an admin level
 - Discovered [crackstation](https://crackstation.net) for password hash cracking
 - Learned how you can use a simple python command to get a bash shell from a basic reverse shell
 - Learned about the nmap 3.81 privilege escalation vulnerability and how to use it (`!sh` while in interactive mode)
