@@ -1,3 +1,5 @@
-remote_theme: pages-themes/primer@v0.2.0
+title: garrett16r.github.io
+description: A personal site for my projects and CTF writeups.
+remote_theme: jekyll/minima@2.5.2
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
