@@ -1,4 +1,3 @@
-# garrett16r.github.io
 ![Profile Picture](assets/pfp.png)
 ## About
 
