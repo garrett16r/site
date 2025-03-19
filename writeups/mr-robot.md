@@ -1,4 +1,4 @@
-# **Info**
+# Mr. Robot
 **Completed 01/22/2023**
 
 https://www.vulnhub.com/entry/mr-robot-1,151/

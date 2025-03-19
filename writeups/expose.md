@@ -1,4 +1,4 @@
-# Info
+# Expose
 **Completed 02/04/2024** 
 
 https://tryhackme.com/room/expose
