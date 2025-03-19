@@ -68,6 +68,7 @@ https://www.vulnhub.com/entry/mr-robot-1,151/
 # **Lessons Learned**
 - Literally this entire CTF
 	- First one I've ever done
+	
 - Learned about using the vuln script with nmap for some hidden directory enumeration
 - Learned a way of bruteforcing usernames on HTTP POST forms with hydra
 - Learned how to bruteforce passwords on wordpress pages using wpscan
