@@ -10,6 +10,7 @@ W1seGuy VM: 10.201.8.201
 **Flags:**
 1. THM{p1alntExtAtt4ckcAnr3alLyhUrty0urxOr}
 2. THM{BrUt3_ForC1nG_XOR_cAn_B3_FuN_nO?}
+
 # Initial Investigation
 ## Connecting to the server
 We are told to connect with `nc 10.201.8.201 1337` to begin the challenge. This reveals a simple prompt that includes some XOR-encrypted ciphertext.
@@ -24,6 +25,7 @@ We're given the Python source code of the server running the challenge
 ![WG4](assets/W1seGuy/WG4.png)
 - The key is randomly generated using the characters a-z, A-Z, 0-9
 - The length of the key is 5 characters
+
 # Cracking the XOR
 ![WG5](assets/W1seGuy/WG5.png)
 - Writing a simple Python script to perform the same operation, but bruteforcing every possible 5-character key was my immediate idea.
@@ -36,14 +38,17 @@ We're given the Python source code of the server running the challenge
 - Continue decryption if so, otherwise skip to the next attempt
 - Check if the decrypted text ends with "}"
 - Output the key and decrypted flag if all conditions are met
+
 # **Flag 1**
 ![WG7](assets/W1seGuy/WG7.png)
 Running my program, even with the inefficient duplicate key generation, output the key and the first flag within a minute.
 
 Entering the flag into the THM page confirmed that it was correct.
+
 # **Flag 2**
 ![WG8](assets/W1seGuy/WG8.png)
 Entering the encryption key into the server reveals flag 2, which can then be entered in THM.
+
 # **Lessons Learned**
 - Short encryption keys with small character sets are trivial to bruteforce, even in a relatively inefficient manner.
 - Using a crib (piece of known plaintext) in a bruteforce attack can speed up the cracking process drastically
