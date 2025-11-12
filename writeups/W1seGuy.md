@@ -1,5 +1,6 @@
 # **Info**
-**Completed 11/12/2025
+**Completed 11/12/2025**
+
 https://tryhackme.com/room/w1seguy
 
 **Devices:**
