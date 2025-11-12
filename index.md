@@ -13,6 +13,10 @@ Here you'll find information about my projects, interests, and more.
 - Completed: 02/04/2024
 - [TryHackMe Page](https://tryhackme.com/room/expose)
 
+### [**W1seGuy**](writeups/W1seGuy.md)
+- Completed: 11/12/2025
+- [TryHackMe Page](https://tryhackme.com/room/w1seguy)
+
 ### Projects
 
 Coming soon?
