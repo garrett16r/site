@@ -4,8 +4,8 @@
 https://tryhackme.com/room/w1seguy
 
 **Devices:**
-My PC: 10.13.47.167
-W1seGuy VM: 10.201.8.201
+- My PC: 10.13.47.167
+- W1seGuy VM: 10.201.8.201
 
 **Flags:**
 1. THM{p1alntExtAtt4ckcAnr3alLyhUrty0urxOr}
