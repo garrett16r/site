@@ -18,7 +18,7 @@ We are told to connect with `nc 10.201.8.201 1337` to begin the challenge. This 
 
 ## Source Code
 We're given the Python source code of the server running the challenge
-[WG2](../assets/W1seGuy/WG2.png)
+![WG2](../assets/W1seGuy/WG2.png)
 - Dummy flag is XOR encrypted with some key and encoded as hex
 - Key length is shorter than the ciphertext length (modulo to loop back over the key)
 
