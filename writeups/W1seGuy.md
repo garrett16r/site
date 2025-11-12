@@ -18,20 +18,20 @@ We are told to connect with `nc 10.201.8.201 1337` to begin the challenge. This 
 
 ## Source Code
 We're given the Python source code of the server running the challenge
-[WG3](../assets/W1seGuy/WG3.png)
+[WG2](../assets/W1seGuy/WG2.png)
 - Dummy flag is XOR encrypted with some key and encoded as hex
 - Key length is shorter than the ciphertext length (modulo to loop back over the key)
 
-![WG4](../assets/W1seGuy/WG4.png)
+![WG3](../assets/W1seGuy/WG3.png)
 - The key is randomly generated using the characters a-z, A-Z, 0-9
 - The length of the key is 5 characters
 
 # Cracking the XOR
-![WG5](../assets/W1seGuy/WG5.png)
+![WG4](../assets/W1seGuy/WG4.png)
 - Writing a simple Python script to perform the same operation, but bruteforcing every possible 5-character key was my immediate idea.
 - I'm aware this is a relatively inefficient approach as it relies on random generation without any checks for repeated keys, but a keyspace this small with a modern CPU means it's still crackable like this.
 
-![WG6](../assets/W1seGuy/WG6.png)
+![WG5](../assets/W1seGuy/WG5.png)
 - I realized that a simple crib could be used to drastically speed up the cracking process.
 - We know the THM flag format is "THM{flag}"
 - Check if the decrypted text starts with "THM{" by iteration 4
@@ -40,13 +40,13 @@ We're given the Python source code of the server running the challenge
 - Output the key and decrypted flag if all conditions are met
 
 # **Flag 1**
-![WG7](../assets/W1seGuy/WG7.png)
+![WG6](../assets/W1seGuy/WG6.png)
 Running my program, even with the inefficient duplicate key generation, output the key and the first flag within a minute.
 
 Entering the flag into the THM page confirmed that it was correct.
 
 # **Flag 2**
-![WG8](../assets/W1seGuy/WG8.png)
+![WG7](../assets/W1seGuy/WG7.png)
 Entering the encryption key into the server reveals flag 2, which can then be entered in THM.
 
 # **Lessons Learned**
